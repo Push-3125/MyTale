@@ -13,7 +13,7 @@ It integrates AI to provide:
 - **Frontend:** HTML, CSS, JavaScript (React optional)
 - **Backend:** Java Spring Boot / Node.js (to be finalized)
 - **Database:** MySQL
-- **AI Integration:** Python (FastAPI) + Groq API
+- **AI Integration:** Python (FastAPI) + GPT API/ Gemoni API
 - **Version Control:** GitHub
 
 ## 📌 Project Timeline
