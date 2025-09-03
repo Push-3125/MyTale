@@ -25,6 +25,10 @@ It integrates AI to provide:
 
 ## 👥 Team Members
 - Hào Nguyễn (Project Manager)
-- +6 team members (Frontend, Backend, AI, Testing)
+- Bảo Khanh (Team member)
+- Thái Hòa (Team member)
+- Quốc Huy (Team member)
+- Xuân Huy (Team member)
+- Văn Hà (Team member)
 
 ## ⚡ How to Run (later)
