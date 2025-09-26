@@ -11,13 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Set up JDK
-        uses: actions/setup-java@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
         with:
-          distribution: 'temurin'
-          java-version: '17'   # thử 17 thay vì 21 nếu gặp lỗi
-
-      - name: Build and run tests
+          node-version: '20'
+      - name: Install dependencies
         working-directory: backend
-        run: mvn -B clean test
+        run: npm install
+      - name: Run tests
+        working-directory: backend
+        run: npm test
