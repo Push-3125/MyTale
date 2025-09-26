@@ -10,17 +10,19 @@ on:
 
 jobs:
   build-test:
-    runs# filepath: d:\ProjectPM\MyTale\.github\workflows\frontend.yml
-name: Frontend CI
-
-on:
-  push:
-    paths:
-      - 'frontend/**'
-  pull_request:
-    paths:
-      - 'frontend/**'
-
-jobs:
-  build-test:
-    runs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install dependencies
+        working-directory: frontend
+        run: npm install
+      - name: Run tests
+        working-directory: frontend
+        run: npm test
+      - name: Build
+        working-directory: frontend
+        run: npm run build
