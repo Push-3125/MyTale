@@ -1,29 +1,13 @@
 {
-<<<<<<< HEAD
-    "name": "backend",
-    "version": "1.0.0",
-    "main": "src/app.js",
-    "scripts": {
-    "start": "node src/app.js",
-    "test": "echo \"Error: no test specified\" && exit 0"
-    },
-    "dependencies": {
-    "express": "^4.18.2",
-    "mysql2": "^3.6.0"
-    }
-=======
-  "name": "my-backend",
+  "name": "backend",
   "version": "1.0.0",
   "main": "src/app.js",
-"scripts": {
-  "start": "node src/app.js"
-},
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "echo \"No test specified\" && exit 0"
+  },
   "dependencies": {
     "express": "^4.18.2",
-    "mongoose": "^7.5.0",
-    "dotenv": "^16.3.1",
-    "cors": "^2.8.5",
-    "body-parser": "^1.20.2"
+    "mysql2": "^3.6.0"
   }
->>>>>>> 2a9489407776a5ae1a7c07d1d6fb42d159bb6e56
 }
