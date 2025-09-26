@@ -1,23 +1,21 @@
-name: Frontend CI
+
+name: Backend CI
 
 on:
   push:
-    paths: ["frontend/**", ".github/workflows/frontend-node.yml"]
+    paths: ["backend/**", ".github/workflows/backend-java.yml"]
   pull_request:
-    paths: ["frontend/**"]
+    paths: ["backend/**"]
 
 jobs:
   build-test:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: frontend
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-java@v4
         with:
-          node-version: "20"
-      - run: npm ci
-      - run: npm run build --if-present
-      - run: npm test --if-present
-
+          distribution: 'temurin'
+          java-version: '21'
+      - name: Build with Maven
+        working-directory: backend
+        run: mvn -B -DskipTests=false clean verify
