@@ -6,6 +6,8 @@ import { AppHeader } from '@/components/app-header';
 import { Plus } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { FavoriteButton } from '@/components/favorite-button';
+import Rating from '@/components/Rating';
+import Comment from '@/components/Comment';
 
 export default function MangaDetailPage({ params }: { params: { mangaId: string } }) {
   const manga = getMangaById(params.mangaId);
@@ -52,9 +54,13 @@ export default function MangaDetailPage({ params }: { params: { mangaId: string 
               )}
               {/* Nút Add to Library thực sự */}
               <div className="w-full sm:w-auto">
-                {/* @ts-expect-error Server Component to Client Component */}
                 <FavoriteButton mangaId={manga.id} />
               </div>
+            </div>
+            {/* Hiển thị chức năng rating và comment ngay dưới nút Đọc Chương Đầu */}
+            <div className="mt-6 flex flex-col gap-4">
+              <Rating mangaId={manga.id} />
+              <Comment mangaId={manga.id} />
             </div>
           </div>
         </div>

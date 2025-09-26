@@ -10,6 +10,7 @@ import {
   Book,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+
 import { useToast } from '@/hooks/use-toast';
 import { cn } from '@/lib/utils';
 import {
@@ -19,6 +20,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { ChevronLeft, ChevronRight, Menu } from 'lucide-react';
+import Comment from '@/components/Comment';
 
 
 
@@ -150,6 +152,10 @@ export function Reader({ manga, chapter }: ReaderProps) {
             </Button>
           </div>
         </div>
+      </div>
+      {/* Box bình luận dưới chương */}
+      <div className="max-w-2xl mx-auto w-full pb-8">
+        <Comment mangaId={manga.id + '-' + chapter.id} />
       </div>
     </div>
   );

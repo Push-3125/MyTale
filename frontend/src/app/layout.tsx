@@ -4,7 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: 'MyTale',
-  description: 'Ứng dụng đọc truyện tranh hiện đại, xây dựng với Next.js.',
+  description: 'A web-based story reading platform with AI features',
 };
 
 export default function RootLayout({
