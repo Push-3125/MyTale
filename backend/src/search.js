@@ -3,8 +3,8 @@ const mysql = require("mysql2/promise");
 async function createConnection() {
     return mysql.createConnection({
     host: "localhost",
-    user: "root",     // thay bằng user MySQL của bạn
-    password: "",     // thay bằng mật khẩu
+    user: "root",   
+    password: "",    
     database: "mytale" // tên database sau khi import schema.sql + seed.sql
     });
 }
